@@ -16,8 +16,6 @@ https://oo1o.cn
 {{birthday2.DATA}}
 今天是我门相识的第{{love_day.DATA}}天
 
-
-
 Actions
 name: weixin
 on:
@@ -32,7 +30,6 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v2
-    
       - name: Set up Python 3.9.12
         uses: actions/setup-python@v2
         with:
