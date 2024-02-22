@@ -3,18 +3,19 @@ https://oo1o.cn
 模版消息的标题就是你推送时显示的标题
 模版消息内容复制下方的代码
 
-{{date.DATA}}
-🌍地区：{{region.DATA}}
-⛅天气：{{weather.DATA}}
-🌡️气温：{{temp.DATA}}
-👨体感温度：{{feelsLike.DATA}}
-👀能见度：{{vis.DATA}}
-🌧️当前小时累计降水量：{{precip.DATA}}
-💨风向：{{wind_dir.DATA}}
-☄️大气压强：{{pressure.DATA}}
-{{birthday1.DATA}} 
-{{birthday2.DATA}}
-今天是我门相识的第{{love_day.DATA}}天
+今天是{{date.DATA}} 
+ 城市：{{city.DATA}} 
+ 天气：{{weather.DATA}} 
+ 最低气温: {{min_temperature.DATA}} 
+ 最高气温: {{max_temperature.DATA}} 
+ 今天是我们恋爱的第{{love_day.DATA}}天 
+ 距离墨墨的生日还有{{birthday.DATA}}天 
+ --------课表-------- 
+ 8-10 {{firstClass.DATA}} 
+ 10-12 {{secondClass.DATA}} 
+ 2-4 {{thirdClass.DATA}} 
+ 4-6 {{fourthClass.DATA}} 
+ 7-10 {{fifthClass.DATA}}
 
 Actions
 name: weixin
