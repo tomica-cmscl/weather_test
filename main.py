@@ -25,7 +25,7 @@ def get_access_token():
         access_token = get(post_url).json()['access_token']
     except KeyError:
         print("获取access_token失败，请检查app_id和app_secret是否正确")
-        os.system("pause")
+        os.system("")
         sys.exit(1)
     # print(access_token)
     return access_token
@@ -41,11 +41,11 @@ def get_weather(region):
     response = get(region_url, headers=headers).json()
     if response["code"] == "404":
         print("推送消息失败，请检查地区名是否有误！")
-        os.system("pause")
+        os.system("")
         sys.exit(1)
     elif response["code"] == "401":
         print("推送消息失败，请检查和风天气key是否正确！")
-        os.system("pause")
+        os.system("")
         sys.exit(1)
     else:
         # 获取地区的location--id
@@ -81,7 +81,7 @@ def get_birthday(birthday, year, today):
             birthday = ZhDate(year, r_mouth, r_day).to_datetime().date()
         except TypeError:
             print("请检查生日的日子是否在今年存在")
-            os.system("pause")
+            os.system("")
             sys.exit(1)
         birthday_month = birthday.month
         birthday_day = birthday.day
@@ -236,11 +236,11 @@ if __name__ == "__main__":
             config = eval(f.read())
     except FileNotFoundError:
         print("推送消息失败，请检查config.txt文件是否与程序位于同一路径")
-        os.system("pause")
+        os.system("paus")
         sys.exit(1)
     except SyntaxError:
         print("推送消息失败，请检查配置文件格式是否正确")
-        os.system("pause")
+        os.system("")
         sys.exit(1)
  
     # 获取accessToken
@@ -259,4 +259,4 @@ if __name__ == "__main__":
     # 公众号推送消息
     for user in users:
         send_message(user, accessToken, region, weather, temp, feelsLike, vis, precip, wind_dir, pressure,) #note_ch, note_en
-    os.system("pause")
+    os.system("")
